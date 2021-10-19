@@ -1,0 +1,5 @@
+###### Requirements without Version Specifiers ######
+asyncio
+
+###### Requirements with Version Specifiers ######
+jackbox.py == 0.1.0
