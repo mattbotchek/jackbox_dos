@@ -31,7 +31,9 @@ I already said this before. But I'll say it again. DO NOT USE WITHOUT PERMISSION
 any damage caused. 
 
 # How to use
-It's fairly simple to setup 
+It's fairly simple to set up, but due to network issues and some race requirements, you may need to increase or decrease
+the time between each start and stop of the python program. to do so just go into the `rapid_start_stop` and change the 
+sleep time on line 11 to what's needed. 
 
     python version: 3.8.5 (Not strictly required I believe)
     
@@ -48,3 +50,10 @@ It's fairly simple to setup
     ./single_connection
 
 Once again. Please don't use this without permission
+
+## Future goals
+
+Switch from using threads to spin up websockets to a non-threading based system. Enabling larger amounts of bots with 
+less overall power requirements. 
+
+Create smart bots that maintain their connection and can either randomly guess choices, or chose based on user input. 

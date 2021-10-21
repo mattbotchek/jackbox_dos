@@ -1,0 +1,12 @@
+#!/bin/bash
+
+input="./jackbox_codes.txt"
+
+while read -r line
+do
+  response=$(curl --write-out "%{http_code}\n" --silent --output /dev/null "https://ecast.jackboxgames.com/api/v2/rooms/$line")
+  if [ "$response" == "200" ]
+  then
+    echo $line
+  fi
+done < "$input"

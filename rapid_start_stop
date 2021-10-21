@@ -6,8 +6,8 @@ read id_code
 
 while true
 do
-    python3 main.py $id_code &
+    python3 jackbox_dos.py $id_code &
     last_pid=$!
-    sleep 3
+    sleep 5
     kill -KILL $last_pid
 done

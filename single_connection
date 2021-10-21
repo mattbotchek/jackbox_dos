@@ -4,4 +4,4 @@ echo Input room ID:
 
 read id_code
 
-python3 main.py $id_code
+python3 jackbox_dos.py $id_code
