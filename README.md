@@ -16,16 +16,6 @@ to flood a Jackbox party pack game. The scripts allow the rapid starting and sto
 to quickly crash the host client. Likely from Jackbox's load balancer, network monitor, or possibly an anti cheat client
 taking notice to unusual activity and then decides to close the game as the safest outcome. 
 
-### Why this shouldn't work
-
-This shouldn't work for a few differnt reasons. First off, Jackbox can handle (at least) the connection of a large amount
-of players at once. As demonstrated by large streamers getting 1000's of players to join their games in a few seconds. 
-What Jackbox can't seem to handle is the connection and disconnection repeatedly. Secondly, the websockets in themselves 
-seem like nothing special, they are maintained, data is passed through them, and then they are closed when a session ends. 
-Which means that either jackbox.py has unusual responses or data that jackbox.tv isn't expecting, this program isn't passing
-correct data, (in which case jackbox.tv's error handling needs to be better), or jackbox.tv has serious issues with how it 
-handles the closing of websockets. 
-
 ## DISCLAIMER
 I already said this before. But I'll say it again. DO NOT USE WITHOUT PERMISSION. And if you do, I am not responsible for
 any damage caused. 
