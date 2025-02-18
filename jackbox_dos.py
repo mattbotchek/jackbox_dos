@@ -17,17 +17,20 @@ def thr(id, i):
 async def do_stuff(id, i):
     print("Bot" + str(i) + " Connecting...")
     client = jackbox.Client()
+    print(id)
     await client.connect(id, "Bot"+str(i))
     print("Bot" + str(i) + " Connected")
+    time.sleep(5)
+    await client.close()
 
 
-def main(id):
-    num_threads = 100
+def main(id, amount):
+    num_threads = int(amount)
     threads = [ threading.Thread(target = thr, args=(id, i,)) for i in range(num_threads) ]
     [ t.start() for t in threads ]
     [ t.join() for t in threads ]
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv[1], sys.argv[2])
 
